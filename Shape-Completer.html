@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Completer</title>
+    <link rel="stylesheet" href="css/shape-completer.css">
+</head>
+
+<body>
+
+    <video id="background" src="videos/Bibi Plone __ Geometric 2D Animation.mp4" autoplay muted loop></video>
+    <video id="overlay" src="videos/GEOMETRIC MOTION GRAPHIC __ ANIMATION.mp4" autoplay muted loop></video>
+    <div class="overlay-layer"></div>
+    <div class="intro-window">
+        <h1>Draw apart and we will complete it for you</h1>
+        <img src="imgs/magic-tool.svg" alt="">
+        <button>Start</button>
+    </div>
+    <button class="redraw-btn">Redraw</button>
+    <select name="model" id="">
+        <option value="cat">cat</option>
+        <option value="bicycle">bicycle</option>
+        <option value="bus">bus</option>
+        <option value="face">face</option>
+        <option value="flower">flower</option>
+        <option value="palm_tree">palm_tree</option>
+        <option value="everything">everything</option>
+    </select>
+    <div class="for-mobile">
+        <h1>This Game Is Under Development for mobile devices...</h1>
+    </div>
+    <script src="js/ml5_min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
+    <script src="js/p5_min.js"></script>
+    <script src="js/p5_dom_min.js"></script>
+    <script src="js/sketchRnn.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>

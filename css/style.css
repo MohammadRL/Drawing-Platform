@@ -1,0 +1,486 @@
+/* Start Global Variables */
+:root {
+    --main-color: #912566c0;
+    --sec-color: #9c1365;
+}
+
+/* End Global Variables */
+
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "KG Blank Space Sketch";
+    /* font-weight: bold; */
+    font-size: 18px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--main-color);
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--sec-color);
+    border-radius: 10px;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(87deg, rgb(255, 255, 255) 20%, #ffaebc4a, #a0e7e557, #ffffff47, #fbe7c682, #FFF);
+    transform: skewX(40deg);
+    z-index: -1;
+}
+
+h2.title {
+
+    text-align: center;
+    font-weight: normal;
+    color: var(--sec-color);
+}
+
+/* End Components */
+
+/* Start Header */
+header {
+    border-bottom: 4px solid #fbddf38f;
+    overflow: hidden;
+    position: relative;
+}
+
+header .background {
+    transform: skewX(99deg);
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding-top: 20px;
+}
+
+
+
+header .container .logo {
+    width: 65px;
+}
+
+@media(max-width:767px) {
+    header .container {
+        gap: 5px;
+    }
+
+    header .container .logo {
+        width: 40px;
+    }
+}
+
+header .container .logo img {
+    max-width: 100%;
+}
+
+header .container nav {}
+
+header .container nav ul.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header .container nav ul.links li {}
+
+header .container nav ul.links li a {
+    font-size: 20px;
+    color: var(--main-color);
+    transition: .3s;
+}
+
+@media(max-width:767px) {
+    header .container nav ul.links li a {
+        font-size: 16px;
+    }
+}
+
+header .container nav ul.links li a:hover {
+    color: var(--sec-color);
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    height: calc(100vh - 94px);
+    overflow: hidden;
+}
+
+
+.landing .intro {
+
+    width: fit-content;
+    text-align: center;
+    align-self: center;
+}
+
+.landing .intro h1 {
+    line-height: 1.4;
+    font-family: "3Dumb";
+    font-weight: bold;
+    color: var(--sec-color);
+    font-size: 40px;
+}
+
+.landing .intro p {}
+
+.landing .intro span {
+    font-family: "Bolt Bd BT";
+    font-size: 26px;
+    color: var(--sec-color);
+
+}
+
+.landing .intro-image {
+    position: relative;
+    z-index: -2;
+}
+
+.landing .intro-image img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.landing .intro-image:last-of-type img {
+    transform: rotate(180deg);
+}
+
+@media(max-width:767px) {
+    .landing .intro-image:nth-of-type(2) {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100dvh;
+    }
+
+    .landing .intro-image:last-of-type {
+        display: none;
+    }
+}
+
+.landing .down-arr {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -25px;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    transition: .3s;
+    animation: up-down 1s infinite alternate;
+}
+
+.landing .down-arr:hover {
+    color: #FFF;
+    /* border: none; */
+    background-color: var(--sec-color);
+}
+
+/* End Landing */
+
+/* Start Games Section */
+section.games {
+    position: relative;
+    /* height: 100vh; */
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+section.games .background {
+    transform: skewX(-40deg);
+
+}
+
+section.games .container {
+    height: 100%;
+}
+
+section.games .holder {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+
+}
+
+@media(max-width:767px) {
+    section.games .holder {
+        flex-direction: column;
+    }
+}
+
+section.games .holder .game {
+    border: 4px solid #EEE;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+
+section.games .holder .game:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    border-color: var(--sec-color);
+    transform: scale(1.2);
+}
+
+@media(max-width:767px) {
+    section.games .holder .game {
+        width: 90%;
+    }
+
+    section.games .holder .game:hover {
+        transform: scale(1.1);
+    }
+}
+
+section.games .holder .game .image {
+    overflow: hidden;
+}
+
+section.games .holder .game .image img {
+    max-width: 100%;
+}
+
+section.games .holder .game .game-name {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: normal;
+    transition: .5s;
+}
+
+section.games .holder .game:hover .game-name {
+    color: var(--sec-color);
+    font-weight: bold;
+}
+
+section.games .holder .game .game-info {
+    text-align: center;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+section.games .holder .game .start-btn {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+    padding: 15px 20px;
+    border: 1px solid #CCC;
+    color: #AAA;
+    transition: .5s;
+}
+
+section.games .holder .game:hover .start-btn {
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+section.games .holder .game .start-btn:hover {
+    background-color: var(--sec-color);
+    color: #FFF;
+}
+
+/* End Games Section */
+
+/* Start Tools Section */
+section.tools {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.tools .background {
+    transform: skewX(63deg);
+}
+
+section.tools .holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+section.tools .tool {
+    flex-basis: 20%;
+}
+
+section.tools .tool h3 {
+    font-family: 'BoingSemiBold,Helvetica,Arial,sans-serif';
+    font-size: 35px;
+    color: #1967D2;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+@media(max-width:767px) {
+    section.tools .holder {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    section.tools .tool {
+        flex-basis: 40%;
+    }
+
+    section.tools .tool h3 {
+        font-size: 30px;
+        width: 400px;
+    }
+}
+
+section.tools .tool img {
+    max-width: 100%;
+}
+
+/* End Tools Section */
+
+/* Start About Section */
+section.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.about .background {
+    transform: skewX(113deg);
+}
+
+section.about .container {}
+
+section.about .container .info {
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+section.about .container .info p span {
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    color: var(--sec-color);
+}
+
+section.about .container .info p {
+    width: 80%;
+    margin: auto;
+    line-height: 1.8;
+}
+
+@media(max-width: 767px) {
+    section.about .container .info p {
+        width: 100%;
+
+    }
+}
+
+/* End About Section */
+
+/* Start Footer */
+footer {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer .background {
+    transform: skewX(84deg);
+}
+
+/* End Footer */
+
+
+
+/* Start Animations */
+@keyframes up-down {
+
+    50%,
+    80%,
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* End Animations */
