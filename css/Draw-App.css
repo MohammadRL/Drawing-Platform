@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: #4A98F7;
   background-image: url(../imgs/pexels-pixmike-998067.jpg);
   animation: background-change 10s infinite alternate;
@@ -31,7 +31,7 @@ body {
 @media (max-width: 767px) {
   body {
     display: block;
-    height: 100dvh;
+    /* height: 100dvh; */
   }
 }
 
